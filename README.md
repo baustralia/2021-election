@@ -7,3 +7,7 @@ This repository contains PHP, HTML, CSS, and JS files, all working together to f
 ## Notice
 
 The MySQL database is removed for security purposes. Please feel free to try it out on your own SQL database!
+
+## Changelog
+
+Build 68 - Base build. Using redesigned Microsoft Windows 9x theme.
