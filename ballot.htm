@@ -1,0 +1,194 @@
+<!doctype html>
+
+<head>
+  <title>2021 Baustralia general election System 2</title>
+  <style>
+    @font-face {
+      font-family: 'Fixedsys';
+      src: url('fsex300-webfont.eot');
+      src: url('fsex300-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fsex300-webfont.woff') format('woff'),
+        url('fsex300-webfont.ttf') format('truetype'),
+        url('fsex300-webfont.svg#FixedsysExcelsior301Regular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      -webkit-font-smoothing: none;
+      -moz-osx-font-smoothing: none;
+      font-smooth: never;
+    }
+
+    body {
+      background: #3A6EA5;
+      overflow-x: hidden;
+      font-family: "Fixedsys", monospace;
+      cursor: context-menu;
+    }
+
+    .taskbar {
+      width: 200vw;
+      height: 28px;
+      border-top: 1px solid white;
+      background: #d4d0c8;
+      position: absolute;
+      bottom: 0;
+      left: 0vw;
+      padding-left: 2px;
+    }
+
+    .btn:nth-child(1) {
+      left: 2px;
+    }
+
+    .btn:nth-child(2) {
+      left: 108px;
+    }
+
+    .btn:nth-child(3) {
+      left: 182px;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 20px;
+      border-left: 1px solid white;
+      border-top: 1px solid white;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      font-size: bigger;
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+
+    .btn:hover {
+      background: #cbc7bd;
+    }
+
+    .btn:active {
+      border-right: 1px solid white;
+      border-bottom: 1px solid white;
+      border-left: 1px solid black;
+      border-top: 1px solid black;
+      background: #cbc7bd;
+    }
+
+    .btn.active {
+      border-right: 1px solid white;
+      border-bottom: 1px solid white;
+      border-left: 1px solid black;
+      border-top: 1px solid black;
+      background: #cbc7bd;
+    }
+
+    .btn.active:active {
+      border-left: 1px solid white;
+      border-top: 1px solid white;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      background: #cbc7bd;
+    }
+
+    .btn.active:hover {
+      background: transparent;
+    }
+
+    .home::before {
+      content: url(icon.png)
+    }
+
+    .paper::before {
+      content: url(paper.png)
+    }
+
+    .buildstring {
+      font-family: Tahoma, sans-serif;
+      font-size: smaller;
+      line-height: 1;
+      text-align: right;
+      color: white;
+      position: absolute;
+      right: 5px;
+      bottom: 33px;
+    }
+
+    .frame {
+      position: absolute;
+      background: white;
+      border: 3px solid #d4d0c8;
+    }
+
+    .frametitle {
+      width: calc(100% - 4px);
+      background: darkblue;
+      color: white;
+      border-bottom: 3px solid #d4d0c8;
+      padding: 2px;
+    }
+
+    .bglogo {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    #ballot {
+      width: 33vw;
+      height: 75vh;
+      top: 16px;
+      left: 16px;
+    }
+
+    #about {
+      width: 33vw;
+      height: 33vh;
+      top: 53px;
+      left: 50vw;
+    }
+
+    #closeabout {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      border-left: 1px solid white;
+      border-top: 1px solid white;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      background: #d4d0c8;
+      width: 16px;
+      color: black;
+      text-align: center;
+    }
+
+    #closeabout:hover {
+      background: #cbc7bd;
+    }
+
+    #closeabout:active {
+      border-right: 1px solid white;
+      border-bottom: 1px solid white;
+      border-left: 1px solid black;
+      border-top: 1px solid black;
+      background: #cbc7bd;
+    }
+  </style>
+</head>
+
+<body>
+  <img class="bglogo" src="export.png" width=200px />
+  <div class="frame" id="ballot">
+    <div class="frametitle"><span class="title paper">Ballot</span></div>
+  </div>
+  <div class="frame" id="about">
+    <div class="frametitle"><span class="title home">About System 2</span><span id="closeabout">X</span></div>
+  </div>
+  <div class="buildstring">
+    <b>Baustralia Elections System 2</b><br />
+    Build 68. For testing purposes only.
+  </div>
+  <div class="taskbar">
+    <a class="btn home">System 2</a>
+    <a class="btn paper active">Ballot</a>
+    <a class="btn home">About System 2</a>
+  </div>
+</body>
