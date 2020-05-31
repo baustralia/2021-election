@@ -11,4 +11,5 @@ The MySQL database is removed for security purposes. Please feel free to try it 
 ## Changelog
 
 Build 68 - Base build. Using redesigned Microsoft Windows 9x theme.
+
 Build 69 - Widescreen startup image (really only looks good in fullscreen mode), modified build string, about button removed from taskbar, using 'System 2' button. Added about info, starting on ballot. Windows are also movable now! Seperated CSS and JS into their own files.
