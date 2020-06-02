@@ -1,33 +1,43 @@
 <!doctype html>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-
 <head>
-  <title>2021 Baustralia general election System 2</title>
-  <link rel="stylesheet" href="./styles.css">
+   <title>2021 Baustralia general election System 2</title>
+   <link rel="stylesheet" href="./styles.css">
 </head>
-
 <body>
-  <img class="bglogo" src="export.png" width=200px />
-  <div class="frame" id="ballot" onclick="raiseBallot()">
-    <div class="frametitle" id="ballotheader"><span class="title paper">Ballot</span></div>
-	<center><h3>2021 Baustralia general election ballot</h3>
-	<p>View candidate speech for <a href="#">John Doe</a> and <a href="#">John Doe</a></center>
-  </div>
-  <div class="frame" id="about" onclick="raiseAbout()">
-    <div class="frametitle" id="aboutheader"><span class="title home">About System 2</span><span id="closeabout" onclick="closeAbout()">X</span></div>
-	<div class="about-image"><img src="about-dark.png" width=200px /></div><div class="about-bar"></div>
-	<div style="padding-left:4em;">© Kingdom of Baustralia. 2020. Managed by the Communications Office.<br/>Baustralia Elections System 2 (Build 69)<br><br><br>This website does not,
-	and cannot replace Microsoft Windows, or any other operating system. This does not have the ability to open a
-	web page, save files, or read and run files, except as neccessary for voting purposes.</div>
-	<a class="action" onclick="closeAbout()" style="position:absolute;right:5px;bottom:5px;">OK</a>
-  </div>
-  <div class="buildstring">
-    <b>Baustralia Elections System 2</b><br />
-    Version 2.0 (Build 69).<br/>For testing purposes only.
-  </div>
-  <div class="taskbar">
-    <a class="btn home" onclick="openAbout()">System 2</a>
-    <a class="btn paper">Ballot</a>
-  </div>
-  <script src="./script.js"></script>
+   <img class="bglogo" src="export.png" width=200px />
+   <div class="frame" id="ballot" onclick="raiseBallot()">
+      <div class="frametitle" id="ballotheader"><span class="title paper">Ballot</span></div>
+      <center>
+         <h3>2021 Baustralia general election ballot</h3>
+         <p>View candidate speech for <a href="#">John Doe</a> and <a href="#">John Doe</a></p>
+      </center>
+   </div>
+   <div class="frame" id="about" onclick="raiseAbout()">
+      <div class="frametitle" id="aboutheader"><span class="title home">About System 2</span><span id="closeabout" onclick="closeAbout()">X</span></div>
+      <div class="about-image"><img src="about-dark.png" width=200px /></div>
+      <div class="about-bar"></div>
+      <div style="padding-left:4em;">© Kingdom of Baustralia. 2020. Managed by the Communications Office.<br/>Baustralia Elections System 2 (Build 69)<br><br><br>This website does not,
+         and cannot replace Microsoft Windows, or any other operating system. This does not have the ability to open a
+         web page, save files, or read and run files, except as neccessary for voting purposes.
+      </div>
+      <a class="action" onclick="closeAbout()" style="position:absolute;right:5px;bottom:5px;">OK</a>
+   </div>
+   <div class="frame" id="notes" onclick="raiseNotes()">
+      <div class="frametitle" id="notesheader"><span class="title pencil">Notes</span><span id="closenotes" onclick="closeNotes()">X</span></div>
+      <textarea></textarea>
+      <a class="action" onclick="closeNotes()" style="position:absolute;right:5px;bottom:5px;">OK</a>
+   </div>
+   <div class="buildstring">
+      <b>Baustralia Elections System 2</b><br />
+      Version 2.0 (Build 70).<br/>For testing purposes only.
+   </div>
+   <div class="taskbar">
+      <a class="btn home" onclick="openAbout()">System 2</a>
+      <div class="tskbrBtnGp">
+         <a class="btn paper" onclick="raiseBallot()">Ballot</a>
+         <a class="btn pencil" onclick="openNotes()">Notes</a>
+      </div>
+   </div>
+   <script src="./script.js"></script>
 </body>

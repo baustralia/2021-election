@@ -11,5 +11,5 @@ The MySQL database is removed for security purposes. Please feel free to try it 
 ## Changelog
 
 Build 68 - Base build. Using redesigned Microsoft Windows 9x theme.
-
 Build 69 - Widescreen startup image (really only looks good in fullscreen mode), modified build string, about button removed from taskbar, using 'System 2' button. Added about info, starting on ballot. Windows are also movable now! Seperated CSS and JS into their own files.
+Build 70 - Added Notes window for writing notes while reading. May come in handy for people who wish to study each other's speeches. Also, the startup window will detect if the user is on mobile or a PC. If the user is on mobile, they will get a Windows 9x-style blue-screen-of-death. Perhaps a Windows C.E. style system will be used instead. The ballot box is still unfinished.
