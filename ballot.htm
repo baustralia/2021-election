@@ -1,5 +1,6 @@
 <!doctype html>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 <head>
    <title>2021 Baustralia general election System 2</title>
    <link rel="stylesheet" href="./styles.css">
@@ -12,14 +13,36 @@
          <h3>2021 Baustralia general election ballot</h3>
          <p>View candidate speech for <a href="#">John Doe</a> and <a href="#">John Doe</a></p>
       </center>
+	  <form action='success.php' method='post' target="_blank"> 
+      <input type="text" id="vname" name="vname" style="width:90%" placeholder="Your name">
+      <select id="riding" name="riding" style="width:91.5%" placeholder="Your name">
+        <option value="None selected" selected disabled hidden>Your riding</option>
+        <option value="Atlas">Atlas</option>
+        <option value="Daytona">Daytona</option>
+        <option value="Flavora">Flavora</option>
+        <option value="Holderton">Holderton</option>
+        <option value="Landspotter">Landspotter</option>
+        <option value="McNevin">McNevin</option>
+        <option value="New Texas">New Texas</option>
+        <option value="Paradisium">Paradisium</option>
+        <option value="Wooler">Wooler</option>
+        <option value="Military or abroad">Military or abroad</option>
+      </select> <a class="help" onclick="alert('Ask His Majesty if you do not know your riding.');" style="cursor:help" title="Ask His Majesty if you do not know your riding.">?</a>
+      <hr>
+      <input type="radio" id="vote" name="vote" value="Doe1"> John Doe, Conservative<br>
+      <input type="radio" id="vote" name="vote" value="Doe2"> John Doe, Union
+      <br>
+      <input type="submit" value="Submit" onclick="submitClicked()">
+    </form>
    </div>
    <div class="frame" id="about" onclick="raiseAbout()">
       <div class="frametitle" id="aboutheader"><span class="title home">About System 2</span><span id="closeabout" onclick="closeAbout()">X</span></div>
       <div class="about-image"><img src="about-dark.png" width=200px /></div>
       <div class="about-bar"></div>
-      <div style="padding-left:4em;">© Kingdom of Baustralia. 2020. Managed by the Communications Office.<br/>Baustralia Elections System 2 (Build 69)<br><br><br>This website does not,
-         and cannot replace Microsoft Windows, or any other operating system. This does not have the ability to open a
-         web page, save files, or read and run files, except as neccessary for voting purposes.
+      <div style="padding-left:4em;" class="abouttext">
+	  Baustralia Elections System<br/>Version 2.0 (Build 71)<br/>© Kingdom of Baustralia. 2020. Managed by the Communications Office.
+	  <br/><br/><br/>
+	  This website does not, and cannot replace Microsoft Windows, or any other operating system. This does not have the ability to open a web page, save files, or read and run files, except as neccessary for voting purposes. All ballots with blank or incorrect information will be spoiled.
       </div>
       <a class="action" onclick="closeAbout()" style="position:absolute;right:5px;bottom:5px;">OK</a>
    </div>
@@ -30,7 +53,7 @@
    </div>
    <div class="buildstring">
       <b>Baustralia Elections System 2</b><br />
-      Version 2.0 (Build 70).<br/>For testing purposes only.
+      Version 2.0 (Build 71).<br/>For testing purposes only.
    </div>
    <div class="taskbar">
       <a class="btn home" onclick="openAbout()">System 2</a>
@@ -38,6 +61,7 @@
          <a class="btn paper" onclick="raiseBallot()">Ballot</a>
          <a class="btn pencil" onclick="openNotes()">Notes</a>
       </div>
+	  <span id="clock" onclick="formatTime()">12:00 PM</span>
    </div>
    <script src="./script.js"></script>
 </body>

@@ -1,3 +1,32 @@
+setInterval(getTime, 1000);
+
+var format = "US";
+
+function formatTime() {
+	if (format == "US") {
+		format = "EU";
+	}
+	else {
+		format = "US";
+	}
+}
+
+function getTime() {
+	var today = new Date();
+	if (format == "US") {
+		var hours = today.getHours() % 12 || 12;
+		if (today.getHours() > 12) {
+			document.getElementById("clock").innerHTML = hours + ":" + ("0" + today.getMinutes()).slice(-2) + " PM";
+		}
+		else {
+			document.getElementById("clock").innerHTML = hours + ":" + ("0" + today.getMinutes()).slice(-2) + " AM";
+		}
+	}
+	else {
+		document.getElementById("clock").innerHTML = ("0" + today.getHours()).slice(-2) + ":" + ("0" + today.getMinutes()).slice(-2);
+	}
+}
+
 function closeAbout() {
 	var about = document.getElementById("about");
 	about.style.visibility = "hidden";
@@ -101,4 +130,14 @@ function dragElement(elmnt) {
 		document.onmouseup = null;
 		document.onmousemove = null;
 	}
+}
+
+function submitClicked() {
+	setTimeout(submitChange, 10);
+	}
+
+function submitChange() {
+	var box = document.getElementById("ballot");
+	var header = '<div class="frametitle" id="ballotheader"><span class="title paper">Ballot</span></div>';
+	box.innerHTML = header + '<p>Thank you for voting. If an error message appears at the top of the screen, please email monarchy@kingdomofbaustralia.com with the error message. Your vote may not have went through.</p><p>We appreciate your vote! If you wish to leave a comment on this interface, on the voting process, or something else we can change, please let us know! We will be acting on all requests possible. You can email us at elections@kingdomofbaustralia.com</p>';
 }
