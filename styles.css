@@ -28,6 +28,23 @@ body {
 	z-index: 100;
 }
 
+#clock {
+	font-family: Tahoma, sans-serif;
+	display:inline-block;
+	position:absolute;
+	right:calc(100vw + 6px);
+	height:20px;
+	bottom:4px;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	background: #cbc7bd;
+	padding-left:4px;
+	padding-right:4px;
+	font-size:smaller;
+}
+
 .btn.home {
 	display: inline-block;
 	position: absolute;
@@ -96,7 +113,7 @@ body {
 
 .frame {
 	position: absolute;
-	background: white;
+	background: #dfdcd6;
 	border: 3px solid #d4d0c8;
 }
 
@@ -124,7 +141,6 @@ body {
 	width: 33vw;
 	top: 53px;
 	left: 50vw;
-	background: #dfdcd6;
 	padding-bottom: 30px;
 	visibility: hidden;
 }
@@ -133,7 +149,6 @@ body {
 	width: 33vw;
 	top: 5vh;
 	right: 10vw;
-	background: #dfdcd6;
 	padding-bottom: 30px;
 	visibility: hidden;
 }
@@ -233,4 +248,66 @@ body {
 	margin-bottom: 1em;
 	height: 8px;
 	background: linear-gradient(to left, darkblue, transparent, darkblue);
+}
+
+.abouttext {
+		font-family: Tahoma, sans-serif;
+	font-size: 75%;
+}
+
+input[type=text]{
+    border-radius: 0;
+    border: 1px solid black;
+	margin-bottom:2px;
+}
+select{
+    border-radius: 0;
+    border: 1px solid black;
+		margin-bottom:2px;
+}
+.help {
+	display: inline-block;
+	border-left: 1px solid white;
+	border-top: 1px solid white;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	font-size: bigger;
+	padding-left: 3px;
+	padding-right: 3px;
+	margin-right: 2px;
+}
+input[type=submit]{
+	display: inline-block;
+	border-left: 1px solid white;
+	border-top: 1px solid white;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	padding-left: 3px;
+		font-size: 100%;
+	padding-right: 3px;
+	margin-right: 2px;
+		font-family: "Fixedsys", monospace;
+		margin-top:3px;
+}
+.help:hover {
+	background: #cbc7bd;
+}
+
+.help:active {
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	background: #cbc7bd;
+}
+input[type=submit]:hover {
+	background: #cbc7bd;
+}
+
+input[type=submit]:active {
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	background: #cbc7bd;
 }
