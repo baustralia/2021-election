@@ -145,6 +145,28 @@ body {
 	visibility: hidden;
 }
 
+#speeches {
+	width: 33vw;
+	height: 33vw;
+	top: 80px;
+	right: 6vw;
+	padding-bottom: 30px;
+	visibility:hidden;
+}
+
+.speech {
+	height: 30vw;
+	padding:3px;
+	overflow: auto;
+}
+
+#sp0 {display:block;}
+#sp1 {display:none;}
+
+.speech h3 {
+	text-align:center;
+}
+
 #notes {
 	width: 33vw;
 	top: 5vh;
@@ -205,6 +227,32 @@ body {
 }
 
 #closenotes:active {
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	background: #cbc7bd;
+}
+
+#closespeeches {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	border-left: 1px solid white;
+	border-top: 1px solid white;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	background: #d4d0c8;
+	width: 16px;
+	color: black;
+	text-align: center;
+}
+
+#closespeeches:hover {
+	background: #cbc7bd;
+}
+
+#closespeeches:active {
 	border-right: 1px solid white;
 	border-bottom: 1px solid white;
 	border-left: 1px solid black;
@@ -311,3 +359,21 @@ input[type=submit]:active {
 	border-top: 1px solid black;
 	background: #cbc7bd;
 }
+
+*:not(textarea) {
+	  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+form {
+	margin-top:1em !important;
+}
+#tskbrsp {display:none;}
+
+.conservative {color:#0055d4;}
+
+.union {color:#4db07d;}
