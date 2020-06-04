@@ -17,3 +17,5 @@ Build 69 - Widescreen startup image (really only looks good in fullscreen mode),
 Build 70 - Added Notes window for writing notes while reading. May come in handy for people who wish to study each other's speeches. Also, the startup window will detect if the user is on mobile or a PC. If the user is on mobile, they will get a Windows 9x-style blue-screen-of-death. Perhaps a Windows C.E. style system will be used instead. The ballot box is still unfinished.
 
 Build 71 - Added clock in taskbar. Added form info. Moved index.htm to startup.htm. The index.htm was recreated to hold a full-width and full-height iframe so window url doesn't change as you navigate through the system. Updated about text too.
+
+Build 72 - Added speeches, with a next button. The 'Speeches' taskbar button also appears when opened and disappears when closed. Ready for developer preview release on 20 June.

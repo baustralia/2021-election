@@ -37,6 +37,13 @@ function closeNotes() {
 	notes.style.visibility = "hidden";
 }
 
+function closeSpeeches() {
+	var taskbar = document.getElementById("tskbrsp");
+	var speeches = document.getElementById("speeches");
+	speeches.style.visibility = "hidden";
+	taskbar.style.display = "none";
+}
+
 function openAbout() {
 	var about = document.getElementById("about");
 	var ballot = document.getElementById("ballot");
@@ -45,6 +52,14 @@ function openAbout() {
 	notes.style.zIndex = "5";
 	ballot.style.zIndex = "1";
 	about.style.visibility = "visible";
+}
+
+function openSpeeches() {
+	var speeches = document.getElementById("speeches");
+	var taskbar = document.getElementById("tskbrsp");
+	speeches.style.zIndex = "100";
+	speeches.style.visibility = "visible";
+	taskbar.style.display = "inline-block";
 }
 
 function openNotes() {
@@ -86,6 +101,7 @@ function raiseBallot() {
 dragElement(document.getElementById("ballot"));
 dragElement(document.getElementById("about"));
 dragElement(document.getElementById("notes"));
+dragElement(document.getElementById("speeches"));
 
 function dragElement(elmnt) {
 	var pos1 = 0,
@@ -140,4 +156,15 @@ function submitChange() {
 	var box = document.getElementById("ballot");
 	var header = '<div class="frametitle" id="ballotheader"><span class="title paper">Ballot</span></div>';
 	box.innerHTML = header + '<p>Thank you for voting. If an error message appears at the top of the screen, please email monarchy@kingdomofbaustralia.com with the error message. Your vote may not have went through.</p><p>We appreciate your vote! If you wish to leave a comment on this interface, on the voting process, or something else we can change, please let us know! We will be acting on all requests possible. You can email us at elections@kingdomofbaustralia.com</p>';
+}
+
+function nextSpeech(s,n) {
+	document.getElementById("sp" + s).style.display="none";
+	document.getElementById("sp" + n).style.display="block";
+	if (s == 0 && n == 1) {
+		document.getElementById("spn").setAttribute("onclick", "nextSpeech(1,0)");
+	}
+	else if (s == 1 && n == 0) {
+		document.getElementById("spn").setAttribute("onclick", "nextSpeech(0,1)");
+	}
 }

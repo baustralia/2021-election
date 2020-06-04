@@ -6,12 +6,12 @@
    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-   <img class="bglogo" src="export.png" width=200px />
+   <img class="bglogo" draggable="false" src="export.png" width=200px />
    <div class="frame" id="ballot" onclick="raiseBallot()">
       <div class="frametitle" id="ballotheader"><span class="title paper">Ballot</span></div>
       <center>
          <h3>2021 Baustralia general election ballot</h3>
-         <p>View candidate speech for <a href="#">John Doe</a> and <a href="#">John Doe</a></p>
+         <a onclick="openSpeeches()" href="#">View candidate speeches</a>
       </center>
 	  <form action='success.php' method='post' target="_blank"> 
       <input type="text" id="vname" name="vname" style="width:90%" placeholder="Your name">
@@ -30,21 +30,33 @@
       </select> <a class="help" onclick="alert('Ask His Majesty if you do not know your riding.');" style="cursor:help" title="Ask His Majesty if you do not know your riding.">?</a>
       <hr>
       <input type="radio" id="vote" name="vote" value="Doe1"> John Doe, Conservative<br>
-      <input type="radio" id="vote" name="vote" value="Doe2"> John Doe, Union
+      <input type="radio" id="vote" name="vote" value="Doe2"> Jane Doe, Union
       <br>
       <input type="submit" value="Submit" onclick="submitClicked()">
     </form>
    </div>
    <div class="frame" id="about" onclick="raiseAbout()">
       <div class="frametitle" id="aboutheader"><span class="title home">About System 2</span><span id="closeabout" onclick="closeAbout()">X</span></div>
-      <div class="about-image"><img src="about-dark.png" width=200px /></div>
+      <div class="about-image"><img draggable="false" src="about-dark.png" width=200px /></div>
       <div class="about-bar"></div>
       <div style="padding-left:4em;" class="abouttext">
-	  Baustralia Elections System<br/>Version 2.0 (Build 71)<br/>© Kingdom of Baustralia. 2020. Managed by the Communications Office.
+	  Baustralia Elections System<br/>Version 2.0 (Build 72)<br/>© Kingdom of Baustralia. 2020. Managed by the Communications Office.
 	  <br/><br/><br/>
 	  This website does not, and cannot replace Microsoft Windows, or any other operating system. This does not have the ability to open a web page, save files, or read and run files, except as neccessary for voting purposes. All ballots with blank or incorrect information will be spoiled.
       </div>
       <a class="action" onclick="closeAbout()" style="position:absolute;right:5px;bottom:5px;">OK</a>
+   </div>
+   <div class="frame" id="speeches">
+      <div class="frametitle" id="speechesheader"><span class="title paper">Speeches</span><span id="closespeeches" onclick="closeSpeeches()">X</span></div>
+			<div class="speech" id="sp0"><h3 class="conservative">John Doe</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada. Sit amet porttitor eget dolor morbi non arcu risus. Turpis tincidunt id aliquet risus feugiat in. Pellentesque nec nam aliquam sem et tortor. Vitae ultricies leo integer malesuada. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. At consectetur lorem donec massa. Vitae et leo duis ut diam. Nisl pretium fusce id velit ut tortor. Justo laoreet sit amet cursus sit amet dictum sit. Elit sed vulputate mi sit. Malesuada fames ac turpis egestas sed. Nibh tortor id aliquet lectus proin.</p>
+				<p>Sem integer vitae justo eget. Ac placerat vestibulum lectus mauris ultrices eros in. Felis eget velit aliquet sagittis. Massa eget egestas purus viverra accumsan in. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. In hac habitasse platea dictumst quisque sagittis purus. Mattis nunc sed blandit libero. At in tellus integer feugiat scelerisque. Ut sem viverra aliquet eget sit. Nunc mattis enim ut tellus elementum sagittis vitae et leo. Ut tristique et egestas quis ipsum. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est. Venenatis urna cursus eget nunc. Placerat orci nulla pellentesque dignissim enim sit. Nullam ac tortor vitae purus. Sed risus ultricies tristique nulla aliquet. Proin nibh nisl condimentum id venenatis a condimentum. Non pulvinar neque laoreet suspendisse. Eget mauris pharetra et ultrices neque.</p>
+			</div>
+			<div class="speech" id="sp1"><h3 class="union">Jane Doe</h3>
+				<p>Morbi tristique senectus et netus et malesuada. Vulputate odio ut enim blandit volutpat maecenas. Velit dignissim sodales ut eu. Integer vitae justo eget magna fermentum. Nunc mattis enim ut tellus elementum sagittis vitae. Euismod quis viverra nibh cras pulvinar mattis nunc sed. Adipiscing commodo elit at imperdiet dui. Sit amet tellus cras adipiscing enim eu. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Dolor magna eget est lorem ipsum dolor. Nisl tincidunt eget nullam non nisi est sit amet facilisis. Viverra adipiscing at in tellus integer. Vitae elementum curabitur vitae nunc sed. Eu non diam phasellus vestibulum lorem sed risus ultricies. Mauris commodo quis imperdiet massa. Eget sit amet tellus cras adipiscing enim. Egestas sed tempus urna et.</p>
+				<p>Sed id semper risus in hendrerit gravida rutrum quisque. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Tristique et egestas quis ipsum suspendisse. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Nullam ac tortor vitae purus faucibus. Nunc non blandit massa enim nec dui. Vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt. Vestibulum lectus mauris ultrices eros in cursus turpis. Tempor nec feugiat nisl pretium fusce id velit ut tortor. Odio facilisis mauris sit amet massa. Vitae aliquet nec ullamcorper sit amet risus.</p>
+			</div>
+	  <div style="position:absolute;right:5px;bottom:5px;"><a class="action" id="spn" onclick="nextSpeech(0,1)" >Next</a>&emsp;<a class="action" onclick="closeSpeeches()">OK</a></div>
    </div>
    <div class="frame" id="notes" onclick="raiseNotes()">
       <div class="frametitle" id="notesheader"><span class="title pencil">Notes</span><span id="closenotes" onclick="closeNotes()">X</span></div>
@@ -53,13 +65,14 @@
    </div>
    <div class="buildstring">
       <b>Baustralia Elections System 2</b><br />
-      Version 2.0 (Build 71).<br/>For testing purposes only.
+      Version 2.0 (Build 72).<br/>For testing purposes only.
    </div>
    <div class="taskbar">
       <a class="btn home" onclick="openAbout()">System 2</a>
-      <div class="tskbrBtnGp">
+      <div id="tskbrBtnGp" class="tskbrBtnGp">
          <a class="btn paper" onclick="raiseBallot()">Ballot</a>
          <a class="btn pencil" onclick="openNotes()">Notes</a>
+		 <a class="btn paper" id="tskbrsp" onclick="openSpeeches()">Speeches</a>
       </div>
 	  <span id="clock" onclick="formatTime()">12:00 PM</span>
    </div>
